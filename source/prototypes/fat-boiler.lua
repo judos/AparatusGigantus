@@ -30,26 +30,25 @@ overwriteContent(fatBoiler, {
 	name = "fat-boiler",
 	icon = "__AparatusGigantus__/graphics/icons/fat-boiler.png",
 	max_health = 2000,
-	collision_box = {{-3.87, -2.37}, {3.87, 2.37}},
+	collision_box = {{-4.5, -3}, {4.5, 3}},
   selection_box = {{-4.5, -3}, {4.5, 3}},
 	energy_consumption = "200MW",
 })
 fatBoiler.fluid_box.pipe_connections = {
-	--{type = "input-output", position = {-5, 1.5}},
-	--{type = "input-output", position = {5, 1.5}}
+	{type = "input-output", position = {-5, 1.5}},
+	{type = "input-output", position = {5, 1.5}}
 }
 fatBoiler.output_fluid_box.pipe_connections = {
-	--{type = "output", position = {0, -3.5}}
+	{type = "output", position = {0, -3.5}}
 }
 fatBoiler.energy_source.connections = {
 	{
-		position = {0, 3.5},
+		position = {0, 2.5},
 		direction = defines.direction.south
 	}
 }
 fatBoiler.energy_source.max_transfer = "40GW"
 fatBoiler.energy_source.pipe_covers = nil
---[[
 for _, arr in pairs(fatBoiler.structure) do
 	local layer = arr.layers
 	for _,sprite in pairs(layer) do
@@ -57,11 +56,10 @@ for _, arr in pairs(fatBoiler.structure) do
 		sprite.hr_version.scale = 1.5
 	end
 end
-]]--
 
 
 fatBoiler.minable.result = "fat-boiler"
 data:extend({	fatBoiler })
 
 
---addTechnologyUnlocksRecipe("optics","lamp-panel")
+addTechnologyUnlocksRecipe("nuclear-power","fat-boiler")
