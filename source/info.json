@@ -1,0 +1,10 @@
+{
+	"name": "AparatusGigantus",
+	"version": "0.0.1",
+	"title": "AparatusGigantus",
+	"author": "judos",
+	"description": "Adds several big f.... machines used for excessive huge vast giant enormous nuclear plants.",
+	"dependencies": ["base >= 0.15.0"],
+	"homepage": "https://github.com/judos/AparatusGigantus",
+	"factorio_version": "0.15"
+}
