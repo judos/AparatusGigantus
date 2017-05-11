@@ -4,7 +4,7 @@ require "libs.prototypes.all"
 local indicator = deepcopy(data.raw["item"]["heat-exchanger"])
 overwriteContent(indicator, {
 	name = "fat-boiler",
-	order = "f[nuclear-energy]-b[heat-exchanger2]",
+	order = "f[nuclear-energy]-c[heat-exchanger]",
 	place_result = "fat-boiler",
 	icon = "__AparatusGigantus__/graphics/icons/fat-boiler.png",
 })
@@ -30,7 +30,7 @@ overwriteContent(fatBoiler, {
 	name = "fat-boiler",
 	icon = "__AparatusGigantus__/graphics/icons/fat-boiler.png",
 	max_health = 2000,
-	collision_box = {{-4.5, -3}, {4.5, 3}},
+	collision_box = {{-4.4, -2.9}, {4.4, 2.9}},
   selection_box = {{-4.5, -3}, {4.5, 3}},
 	energy_consumption = "200MW",
 })
